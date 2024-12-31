@@ -89,17 +89,24 @@
             width="1920" />
         <div class="overlay">
             <div class="text-center">
-                <h1>Find Best Jobs near you</h1>
+                <h1>Find Best Jobs Near You</h1>
                 <div class="search-container">
-                    <select>
-                        <option>Select Domain</option>
+                    <select id="domain" (change)="onDomainChange($event)">
+                        <option value="">Select Domain</option>
+                        <option *ngFor="let domain of domains" [value]="domain.id">
+                            {{ domain.name }}
+                        </option>
                     </select>
-                    <select>
-                        <option>Select Skills</option>
+                    <select id="skill">
+                        <option value="">Select Skills</option>
+                        <option *ngFor="let skill of skills" [value]="skill">
+                            {{ skill }}
+                        </option>
                     </select>
                     <input placeholder="Enter Location" type="text" />
                     <button>Search Jobs</button>
                 </div>
+
             </div>
         </div>
     </div>
