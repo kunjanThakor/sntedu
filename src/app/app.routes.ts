@@ -6,11 +6,11 @@ import { LandingComponent } from './components/landing/landing.component';
 import { HomecontenComponent } from './components/homeconten/homeconten.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/snt/home', pathMatch: 'full' },
+    { path: '', redirectTo: '/snt', pathMatch: 'full' },
     {
         path: "snt", children: [
             {
-                path: "home", component: HomecontenComponent
+                path: "", component: HomecontenComponent
             },
             {
                 path: "about", component: AboutComponent
